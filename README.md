@@ -6,10 +6,20 @@
 
 ## Task1
 
-* Set up the environment (using anaconda, under the root of this repository)
+### 1. Set up the environment (using anaconda, under the root of this repository)
 
-  ```shell
-  conda env create -f env.yml
-  ```
+```shell
+conda env create -f env.yml
+```
+
+### 2. Impute Missing Values
+
+* We use median imputation since there are many outliers in the dataset, because mean is sensitive to outliers.
+
+### 3. Remove Outliers
+
+* We use isolationforest to remove outliers, but the number of removed outliers is small. 
+
+### 4. Feature Selection (Important step)
 
 * 
