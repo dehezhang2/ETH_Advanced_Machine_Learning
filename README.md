@@ -4,3 +4,8 @@
   文件使用了lgb训练模型， 提高num_leaves，max_depth，num_iterations可让模型更加拟合
   
   下一步： 改进feature selection
+
+2021-11-6 晚 20：56
+ 增加了feature correlation reduction
+ feature selection 量级在100左右
+ validation score 能到0.648
