@@ -5,7 +5,8 @@
   
   下一步： 改进feature selection
 
-2021-11-6 晚 20：56
+2021-11-6 晚 20：56 
+ 提交了task1-lgb-correlation_reduction
  增加了feature correlation reduction
  feature selection 量级在100左右
  validation score 能到0.648
