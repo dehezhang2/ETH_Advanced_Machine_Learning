@@ -17,3 +17,7 @@
  feature selection 54-50 pearson threshold 0.001, 0.96
  validation score 能到0.669
 
+
+ 2021-11-8 晚 22：48 
+ 提交了gp_lkl_model_merge
+ 在刘书记开创性GP和lgb的基础上，融合了lgb和gp， validation score能到0.69 开心！！！ ：-）
