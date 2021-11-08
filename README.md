@@ -5,8 +5,15 @@
   
   下一步： 改进feature selection
 
-2021-11-6 晚 20：56 
+2021-11-7 晚 20：56 
  提交了task1-lgb-correlation_reduction
  增加了feature correlation reduction
  feature selection 量级在100左右
  validation score 能到0.648
+ 
+ 2021-11-8 晚 20：56 
+ 提交了GP-lkl
+ 在刘书记开创性GP的基础上增加了feature correlation reduction
+ feature selection 54-50 pearson threshold 0.001, 0.96
+ validation score 能到0.669
+
