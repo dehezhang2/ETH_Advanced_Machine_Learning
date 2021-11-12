@@ -21,3 +21,8 @@
  2021-11-8 晚 22：48 
  提交了gp_lkl_model_merge
  在刘书记开创性GP和lgb的基础上，融合了lgb和gp， validation score能到0.69 开心！！！ ：-）
+ 
+ 2021-11-12 下午 16：01 
+提交了three_merge
+在组长和书记开创性的工作基础上， 融合了gp(rbf kernel)， gp(quadratic kernel)以及lgb， 
+validation score达到了 0.6945， 但是public sccore 提升不明显
