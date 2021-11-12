@@ -26,3 +26,7 @@
 提交了three_merge
 在组长和书记开创性的工作基础上， 融合了gp(rbf kernel)， gp(quadratic kernel)以及lgb， 
 validation score达到了 0.6945， 但是public sccore 提升不明显
+
+ 2021-11-12 下午 19：08 
+修改了three_merge中gp(rbf kernel)方法的feature选择的参数,同时用了shuffle
+validation score达到了 0.696， public sccore 提升至0.756
