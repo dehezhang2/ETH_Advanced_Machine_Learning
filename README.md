@@ -41,9 +41,9 @@ conda env create -f env.yml
 * Boosting + Bagging (ZDH not work)
 * Hierarchy (ZDH not work)
 * Feature extraction (MY)
-  * Feature from independent periods (not work)
-  * Feature from u-wave (work)
-  * **Delete feature from fish**
+  * Feature from independent periods (not work MY)
+  * Feature from u-wave (work MY)
+  * **Delete feature from fish** 
   * **Print best features**
   * **Merge features from different fish**
 * Reweighting (LKL work)
@@ -52,7 +52,6 @@ conda env create -f env.yml
 * K-fold voting (ZDH work)
 * **K-fold trick (ZDH)**
 * **Model fusion**
-  * **XGB**
-  * **SVC**
-  * **Random forest**
-  * **Adaboost**
+  * **Random forest(LKL)**
+  * **MLP(MY)**
+  * **XGB (MY)**
