@@ -4,7 +4,7 @@
 
 * Predict the mean of the dataset => method: just output the mean :)
 
-## Task1: predict a person's age from the brain image data
+## Task 1: Predict a person's age from the brain image data
 
 ### 1. Set up the environment (using anaconda, under the root of this repository)
 
@@ -28,8 +28,31 @@ conda env create -f env.yml
 * We use a combination of random forest regressor (select the feature on the top layers of the tree) and pearson correlation (select the feature has high correlation with output). Also we remove the highly correlated features.
 * As we use model fusion, each model cannot have much correlation with each other. Thus, we use different hyperaparameters for feature selection. 
 
-### 5. Model 
+### 5. Model
 
 * We use a combination of lightgbm (tree based algorithm) and Gaussian Process to predict the age. 
 * For Gaussian process, we fuse two models with Matern and RationalQuadratic kernels. 
 * We use K-fold validation to get the validation score, and average the prediction result of K folds as the final output. 
+
+## Task 2: Predict heart disease class according to the ECG signal
+
+### 1. What we can try
+
+* Boosting + Bagging (ZDH not work)
+* Hierarchy (ZDH not work)
+* Feature extraction (MY)
+  * Feature from independent periods (not work)
+  * Feature from u-wave (work)
+  * **Delete feature from fish**
+  * **Print best features**
+  * **Merge features from different fish**
+* Reweighting (LKL work)
+  * expand dataset (wrong validation but better performance)
+  * **change to weighted loss**
+* K-fold voting (ZDH work)
+* **K-fold trick (ZDH)**
+* **Model fusion**
+  * **XGB**
+  * **SVC**
+  * **Random forest**
+  * **Adaboost**
