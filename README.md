@@ -53,5 +53,27 @@ conda env create -f env.yml
 * **K-fold trick (ZDH)**
 * **Model fusion**
   * **Random forest(LKL)**
-  * **MLP(MY)**
+  * **MLP(LKL)**
   * **XGB (MY)**
+  * **Adaboost(ZDH)**
+  * **HistGradientBoostingClassifier(ZDH)**
+
+### 2. Local Validation Score
+
+* Gradient Boost
+
+  * Normal: 0.814
+  * dataset expansion: 0.815
+  * Fish hyper parameter: 0.816
+  * Fish hyper parameter + MY Feature: 0.808
+  * Fish hyper parameter + MY Feature + no normalize: 0.8116
+  * Fish hyper parameter + dataexpansion
+
+* Random Forest
+
+  * Without dataset expansion: 0.79
+  * With dataset expansion: 0.792
+
+* MLP
+
+  
