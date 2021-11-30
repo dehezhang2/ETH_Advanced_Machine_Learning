@@ -32,7 +32,4 @@ Porject 1
   修改了three_merge中gp(rbf kernel)方法的feature选择的参数,同时用了shuffle
   validation score达到了 0.696， public sccore 提升至0.756
   
-Project2
-  2021-11-30 下午 15：30
-  提交了 特征精选_基于8163_效果822以及特征海选_based_on_fish2。 先在fisht2（带fft）的基础上选一批可能的种子feature，
-  然后在组长8163的模型上精选feature， 最后发现fft+wavelet+half of bruteforce feature效果最好
+
