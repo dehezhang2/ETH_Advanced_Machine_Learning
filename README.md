@@ -36,44 +36,35 @@ conda env create -f env.yml
 
 ## Task 2: Predict heart disease class according to the ECG signal
 
-### 1. What we can try
+### 1. Feature Extraction
 
-* Boosting + Bagging (ZDH not work)
-* Hierarchy (ZDH not work)
-* Feature extraction (MY)
-  * Feature from independent periods (not work MY)
-  * Feature from u-wave (work MY)
-  * **Delete feature from fish** 
-  * **Print best features**
-  * **Merge features from different fish**
-* Reweighting (LKL work)
-  * expand dataset (wrong validation but better performance)
-  * **change to weighted loss**
-* K-fold voting (ZDH work)
-* **K-fold trick (ZDH)**
-* **Model fusion**
-  * **Random forest(LKL)**
-  * **MLP(LKL)**
-  * **XGB (MY)**
-  * **Adaboost(ZDH)**
-  * **HistGradientBoostingClassifier(ZDH)**
+* In this project, we use the library biopsspy ecg to get the feature. The used features includes
+  * fast fourier transformation of the signal
+  * reprojected signal using wavelet (using signal that is similar to the ecg)
+  * PQRST indices and value
+  * U wave
+  * mean, median, min, max, standard deviation of 
+    * Peak values 
+    * rpeaks and its differentiation
+    * templates 
+    * heart rate and its differentiation
+    * Heart rate ts and its differentiation
+* We found the order of features is also important. 
 
-### 2. Local Validation Score
+### 2. Feature Selection
 
-* Gradient Boost
+We then use extratree classifier to select 200 features of above feature according to the feature importance.
 
-  * Normal: 0.814
-  * dataset expansion: 0.815
-  * Fish hyper parameter: 0.816
-  * Fish hyper parameter + MY Feature: 0.808
-  * Fish hyper parameter + MY Feature + no normalize: 0.8116
-  * Fish hyper parameter + dataexpansion
+### 3. Model
 
-* Random Forest
+* Gradient boosting as the model for prediction.
+* Dataset expansion: To solve the imbalance problem, we expand the dataset.
+* Hierarchy classifier: we use “one agains others” strategy, to divide the multi-class problem into a stack of binary classification tasks.
+  * First classify noisy and non-noisy signals
+  * Then classify healthy and unhealthy signals
+  * Finally classify class one and two
+  * For each classifier, we expand the dataset to make the binary classes balanced. 
+* Voting:
+  * Use 5 fold to predict the validation score and average the prediction of the results.
+  * Randomly shuffle the dataset, and select results with higher validation scores. 
 
-  * Without dataset expansion: 0.79
-  * With dataset expansion: 0.792
-
-* MLP
-
-  
